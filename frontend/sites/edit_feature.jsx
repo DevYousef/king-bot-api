@@ -7,6 +7,7 @@ import BuildingQueue from '../features/building_queue';
 import RaiseFields from '../features/raise_fields';
 import TradeRoute from '../features/trade_route';
 import TimedAttack from '../features/timed_attack';
+import AutoVillageBuilder from '../features/auto_village_builder'
 import uniqid from 'uniqid';
 
 import { connect } from 'unistore/preact';
@@ -110,6 +111,9 @@ export default class EditFeature extends Component {
 				break;
 			case 'raise_fields':
 				feat = <RaiseFields feature={ this.state } submit={ this.submit } delete={ this.delete } />;
+				break;
+			case 'auto_village_builder':
+				feat = <AutoVillageBuilder feature={ this.state } submit={ this.submit } delete={ this.delete } />;
 				break;
 			case 'trade_route':
 				feat = <TradeRoute feature={ this.state } submit={ this.submit } delete={ this.delete } />;

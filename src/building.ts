@@ -106,7 +106,6 @@ class building_queue {
 			const villages_data: any = await village.get_own();
 			let village_id: number = 0;
 			for (let vill in this.loop_data) {
-				// const village_obj: Ivillage = village.find(vill, villages_data);
 				village_id = Number(vill);
 				params.push(this.building_collection_ident + village_id);
 				params.push(this.building_queue_ident + village_id);

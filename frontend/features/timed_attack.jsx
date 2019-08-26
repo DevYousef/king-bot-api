@@ -8,7 +8,7 @@ export default class SendTimedAttack extends Component {
 		name: 'send timed attack',
 		own_tribe: 0,
 		village_name: '',
-		village_id: '',
+		village_id: 0,
 		wait_time: '',
 		all_villages: [],
 		target_x: '',
@@ -97,7 +97,7 @@ export default class SendTimedAttack extends Component {
 			error_village: (this.state.village_id == 0)
 		});
 
-		if (/*this.state.error_wait_time || */this.state.error_village) return;
+		if (this.state.error_wait_time || this.state.error_village) return;
 
 		this.props.submit({ ...this.state });
 	}
