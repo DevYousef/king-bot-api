@@ -1,8 +1,8 @@
 import kingbot from './src';
 
-const gameworld = '';
-const email = '';
-const password = '';
+const gameworld = 'com4';
+const email = 'mardy898@superrito.com';
+const password = '1lT&HTML';
 // only change if needed
 const sitter_type = ''; // 'sitter' or 'dual'
 const sitter_name = ''; // ingame avatar name

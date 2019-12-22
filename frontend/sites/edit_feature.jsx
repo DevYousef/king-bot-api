@@ -2,6 +2,7 @@ import { h, render, Component } from 'preact';
 import { route } from 'preact-router';
 import axios from 'axios';
 import Adventure from '../features/adventure';
+import Manager from '../features/manager';
 import SendFarmlist from '../features/send_farmlist';
 import BuildingQueue from '../features/building_queue';
 import RaiseFields from '../features/raise_fields';
@@ -48,6 +49,7 @@ export default class EditFeature extends Component {
 		};
 
 		axios.post('/api/feature', payload).then(res => {
+			console.log("Recieved request");
 			const { error, message, data } = res.data;
 
 			if (error) {
@@ -101,6 +103,9 @@ export default class EditFeature extends Component {
 		switch (ident) {
 			case 'hero':
 				feat = <Adventure feature={ this.state } submit={ this.submit } />;
+				break;
+			case 'manager':
+				feat = <Manager feature={ this.state } submit={ this.submit } />;
 				break;
 			case 'farming':
 				feat = <SendFarmlist feature={ this.state } submit={ this.submit } delete={ this.delete } />;

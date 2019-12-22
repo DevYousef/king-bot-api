@@ -8,6 +8,7 @@ public/
 electron-dist
 king-bot-api-*
 KingBotApi.dmg
+dev_main.js
 
 # Logs
 logs

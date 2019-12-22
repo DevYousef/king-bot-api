@@ -10,7 +10,7 @@ import { Ifeature_params, feature } from './features/feature';
 import { Ivillage, Ibuilding, Iplayer } from './interfaces';
 import { find_state_data } from './util';
 import {
-	raise_fields, building_queue,
+	account_manager, raise_fields, building_queue,
 	finish_earlier, auto_adventure, send_farmlist,
 	trade_route, timed_attack
 } from './features';
@@ -20,6 +20,7 @@ class server {
 	app: any = null;
 
 	features: feature[] = [
+		account_manager,
 		finish_earlier,
 		auto_adventure,
 		send_farmlist,
